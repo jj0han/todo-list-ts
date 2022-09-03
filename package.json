@@ -1,4 +1,6 @@
 {
+  "name": "to-do-list",
+  "homepage": "to-do-list",
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build"
