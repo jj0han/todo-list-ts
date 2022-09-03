@@ -1,0 +1,72 @@
+* {
+    border: none;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: normal;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    align-items: center;
+    background-color: rgb(214, 214, 214);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.app {
+    align-items: center;
+    background-color: rgb(246, 246, 246);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #0000002b;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    min-height: 90%;
+    width: 40%;
+    max-height: 700px;
+}
+
+#new-task-form {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#new-task-title {
+    border: 1px solid #c9c9c9;
+    border-radius: 7px;
+    flex-grow: 1;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#add-button {
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+#list {
+    width: 100%;
+}
+
+.list-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #00000047;
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px){
+    .app {
+        width: 100%;
+        max-width: none;
+    }
+}
