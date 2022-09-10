@@ -1,5 +1,7 @@
 # TO DO LIST
 
+LInk: <a href="https://2do-list-ts.netlify.app/">https://2do-list-ts.netlify.app/</a>
+
 ## sobre
 aplicação de lista de tarefas feita com typescript.
 É possível adicionar tarefas e marcá-las como concluídas, além disso, as tarefas são salvas no local storage.
