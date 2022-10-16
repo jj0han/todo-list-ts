@@ -7,6 +7,9 @@
   <title>To Do List</title>
   <link rel="stylesheet" href="index.css">
   <script src="/dist/index.js" type="module" defer></script>
+  <script src="/dist/func/addNewTask.js" type="module" defer></script>
+  <script src="/dist/func/items.js" type="module" defer></script>
+  <script src="/dist/func/updateList.js" type="module" defer></script>
 </head>
 <body>
   <div class="app">
@@ -16,6 +19,10 @@
       <button id="add-button" type="submit">Add</button>
     </form>
     <ul id="list"></ul>
+  </div>
+  <div id="completed" class="app">
+    <h3>COMPLETED TAKS</h3>
+    <ul id="completed-list"></ul>
   </div>
   <noscript>You need to enable JavaScript to run this app.</noscript>
 </body>
