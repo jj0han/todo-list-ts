@@ -1,6 +1,7 @@
 import icon from "../assets/images/trash-con.svg"
+import pencil from "../assets/images/pencil.svg"
 import type { Task } from "../../types/Tasks"
-import { saveItems, deleteItem } from "../index"
+import { saveItems, deleteItem, editItem } from "../index"
 import updateList from "./updateList"
 
 export default function addNewTask(newTask : Task) {
@@ -9,10 +10,18 @@ export default function addNewTask(newTask : Task) {
     const label = document.createElement("label")
     const span = document.createElement("span")
     const img = document.createElement("img")
-  
+    const edit = document.createElement("img")
+    const imgsContainer = document.createElement("div")
+
+    imgsContainer.style.display = "flex"
+
     img.classList.add("trash")
     img.setAttribute("id", newTask.id)
     img.setAttribute("src", icon)
+
+    edit.classList.add("edit")
+    edit.setAttribute("id", newTask.id)
+    edit.setAttribute("src", pencil)
   
     listItem.classList.add("list-item")
     checkbox.classList.add("checkbox")
@@ -30,7 +39,9 @@ export default function addNewTask(newTask : Task) {
     span.textContent = newTask.title
     label.append(checkbox, span)
     listItem.appendChild(label)
-    listItem.appendChild(img)
+    imgsContainer.appendChild(edit)
+    imgsContainer.appendChild(img)
+    listItem.appendChild(imgsContainer)
   
     updateList(checkbox, listItem)
   
@@ -38,6 +49,9 @@ export default function addNewTask(newTask : Task) {
     trash?.forEach((item) => {
       deleteItem(item)
     })
-  }
 
-  
+    const editInputs = document.querySelectorAll(".edit")
+    editInputs.forEach((input) => {
+      editItem(input)
+    })
+  }
